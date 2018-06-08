@@ -5,8 +5,8 @@ import 'vuetify/dist/vuetify.css'
 
 Vue.use(Vuetify, {
   theme: {
-    primary: '#FF8500',
-    secondary: '#00AEEF',
+    primary: '#E17909',
+    secondary: '#009DD6',
     accent: '#005D81',
     error: '#b71c1c'
   }

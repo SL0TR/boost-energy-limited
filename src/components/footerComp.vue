@@ -4,7 +4,7 @@
       <v-btn
         v-for="link in links"
         :key="link"
-        color="white"
+        color="primary"
         flat
       >
         {{ link }}
@@ -13,7 +13,7 @@
         Developed by <v-btn color="secondary" outline round>Mohaimin</v-btn>
       </v-flex>
       <v-flex xs12 py-2 text-xs-center white--text>
-        &copy;2018 — <strong class="primary--text">Boost Energy Limited</strong>
+        &copy;2018 — <strong class="secondary--text">Boost Energy Limited</strong>
       </v-flex>
     </v-layout>
   </v-footer>

@@ -43,5 +43,23 @@ import footerComp from './components/footerComp'
     cursor: pointer;
   }
 
+  .line-height {
+    line-height: 2rem !important;
+  }
+
+  .border-bottom {
+    position: relative;
+  }
+
+  .border-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    background: var(--secondary-color);
+    width: 130%;
+    left: -15%;
+    height: 4px;
+  }
+
 </style>
 

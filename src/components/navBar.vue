@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer
+    <!-- <v-navigation-drawer
       fixed
       :mini-variant="miniVariant"
       :clipped="clipped"
@@ -20,16 +20,19 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
     <v-toolbar fixed app :clipped-left="clipped" color="white">
       <img class="nav-logo" src="../statics/boost-energy-ltd/boost-energy-ltd-logo.png" alt="boost-energy-ltd-logo">
       <v-spacer></v-spacer>
-      <v-btn icon @click.stop="drawer = !drawer">
-        <v-icon color="primary">menu</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'" color="primary"></v-icon>
-      </v-btn>
+        <v-btn
+          v-for="link in navItems"
+          :key="link"
+          color="secondary"
+          flat
+        >
+          {{ link.title }}
+          <v-icon color="primary" right dark>{{ link.icon }}</v-icon>
+        </v-btn>
     </v-toolbar>
   </div>
 </template>
@@ -38,19 +41,13 @@
 export default {
   data () {
     return {
-      clipped: true,
-      drawer: true,
-      fixed: false,
-      items: [
+      navItems: [
         { title: 'Home', icon: 'dashboard' },
-        { title: 'About Us', icon: 'work' },
+        { title: 'About Us', icon: 'group' },
         { title: 'Features', icon: 'stars' },
         { title: 'Services', icon: 'whatshot' },
         { title: 'Contact Us', icon: 'mail' }
-      ],
-      miniVariant: true,
-      right: true,
-      title: 'Boost Energy Limited'
+      ]
     }
   }
 }
