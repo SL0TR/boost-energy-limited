@@ -1,21 +1,31 @@
 <template>
   <v-content>
-    <v-container fluid>
-      <v-slide-y-transition mode="out-in">
-        <v-layout column align-center>
-            <h2>Boost Energy Limited</h2>
-        </v-layout>
-      </v-slide-y-transition>
+    <v-container fluid class="section">
+      <home-section/>
     </v-container>
   </v-content>
 </template>
 
 <script>
-export default {
+import homeSection from '../components/pageSections/home'
 
+export default {
+  data () {
+    return {
+    }
+  },
+  components: {
+    homeSection
+  }
 }
 </script>
 
 <style scoped>
+  .section {
+    height: calc(100vh - 61px);
+    width: 100%;
+    padding: 0;
+  }
+
 
 </style>
