@@ -2,12 +2,14 @@
   <v-content>
     <v-container fluid class="section">
       <home-section/>
+      <about-us/>
     </v-container>
   </v-content>
 </template>
 
 <script>
 import homeSection from '../components/pageSections/home'
+import aboutUs from '../components/pageSections/aboutUs'
 
 export default {
   data () {
@@ -15,15 +17,14 @@ export default {
     }
   },
   components: {
-    homeSection
+    homeSection,
+    aboutUs
   }
 }
 </script>
 
 <style scoped>
   .section {
-    height: calc(100vh - 61px);
-    width: 100%;
     padding: 0;
   }
 
