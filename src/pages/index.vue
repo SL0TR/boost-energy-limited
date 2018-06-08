@@ -2,14 +2,16 @@
   <v-content>
     <v-container fluid class="section">
       <home-section/>
-      <about-us/>
+      <about-us-section/>
+      <features-section/>
     </v-container>
   </v-content>
 </template>
 
 <script>
 import homeSection from '../components/pageSections/home'
-import aboutUs from '../components/pageSections/aboutUs'
+import aboutUsSection from '../components/pageSections/aboutUs'
+import featuresSection from '../components/pageSections/features'
 
 export default {
   data () {
@@ -18,7 +20,8 @@ export default {
   },
   components: {
     homeSection,
-    aboutUs
+    aboutUsSection,
+    featuresSection
   }
 }
 </script>

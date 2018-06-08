@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="nav">
     <!-- <v-navigation-drawer
       fixed
       :mini-variant="miniVariant"
@@ -24,15 +24,15 @@
     <v-toolbar fixed app :clipped-left="clipped" color="white">
       <img class="nav-logo" src="../statics/boost-energy-ltd/boost-energy-ltd-logo.png" alt="boost-energy-ltd-logo">
       <v-spacer></v-spacer>
-        <v-btn
-          v-for="link in navItems"
-          :key="link"
-          color="secondary"
-          flat
-        >
-          {{ link.title }}
-          <v-icon color="primary" right dark>{{ link.icon }}</v-icon>
-        </v-btn>
+        <a v-for="link in navItems" :key="link" :href="link.url">
+          <v-btn
+            color="secondary"
+            flat
+          >
+            {{ link.title }}
+            <v-icon color="primary" right dark>{{ link.icon }}</v-icon>
+          </v-btn>
+        </a> 
     </v-toolbar>
   </div>
 </template>
@@ -42,11 +42,29 @@ export default {
   data () {
     return {
       navItems: [
-        { title: 'Home', icon: 'dashboard' },
-        { title: 'About Us', icon: 'group' },
-        { title: 'Features', icon: 'stars' },
-        { title: 'Services', icon: 'whatshot' },
-        { title: 'Contact Us', icon: 'mail' }
+        { 
+          title: 'Home',
+          icon: 'dashboard',
+          url: '#nav'
+        },
+        { 
+          title: 'About Us',
+          icon: 'group',
+          url: '#about-us'
+        },
+        { 
+          title: 'Features',
+          icon: 'stars',
+          url: '#features'
+        },
+        { 
+          title: 'Services',
+          icon: 'whatshot'
+        },
+        { 
+          title: 'Contact Us',
+          icon: 'mail'
+        }
       ]
     }
   }
@@ -69,6 +87,10 @@ export default {
   .nav-logo {
     height: 80%;
     width: 5rem;
+  }
+
+  a {
+    text-decoration: none;
   }
 
 </style>

@@ -61,5 +61,9 @@ import footerComp from './components/footerComp'
     height: 4px;
   }
 
+  .full-width {
+    width: 100%;
+  }
+
 </style>
 

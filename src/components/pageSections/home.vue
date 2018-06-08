@@ -1,7 +1,7 @@
 <template>
   <v-slide-y-transition mode="out-in">
-    <v-layout column align-center justify-center class="white--text home">
-      <h1 class="mt-4 mb-4 display-3 primary--text text-xs-center">Boost Energy Limited</h1>
+    <v-layout column align-center justify-center class="white--text home" id="home">
+      <h1 class="mt-4 mb-4 display-4 primary--text text-xs-center">Boost Energy Limited</h1>
       <p class="mt-4 mb-4 headline text-xs-center">Began it's journey in 2017</p>
       <p class="mt-4 mb-4 headline text-xs-center">Cylinder manufacturing, LPG Bottling and distribution of LP Gas throughout the Bangladesh.</p>
     </v-layout>
