@@ -7,8 +7,8 @@
       v-model="drawer"
       right
       app
-      class="secondary"
-      hide-overlay
+      class="secondary d-flex"
+      hide-overlayd-flex
     >
       <v-list>
         <v-list-tile v-for="item in items" :key="item.title" ripple>
@@ -24,8 +24,6 @@
     <v-toolbar fixed app :clipped-left="clipped" color="white">
       <img class="nav-logo" src="../statics/boost-energy-ltd/boost-energy-ltd-logo.png" alt="boost-energy-ltd-logo">
       <v-spacer></v-spacer>
-      <!-- <v-toolbar-title v-text="title" class="secondary--text headline"></v-toolbar-title>
-      <v-spacer></v-spacer> -->
       <v-btn icon @click.stop="drawer = !drawer">
         <v-icon color="primary">menu</v-icon>
       </v-btn>
@@ -41,12 +39,14 @@ export default {
   data () {
     return {
       clipped: true,
-      drawer: false,
+      drawer: true,
       fixed: false,
       items: [
         { title: 'Home', icon: 'dashboard' },
-        { title: 'Account', icon: 'account_box' },
-        { title: 'Admin', icon: 'gavel' }
+        { title: 'About Us', icon: 'work' },
+        { title: 'Features', icon: 'stars' },
+        { title: 'Services', icon: 'whatshot' },
+        { title: 'Contact Us', icon: 'mail' }
       ],
       miniVariant: true,
       right: true,

@@ -19,6 +19,5 @@ export default {
     height: calc(100vh - 61px);
     width: 100%;
     background-size: 100% 100%;
-    
   }
 </style>
