@@ -65,5 +65,9 @@ import footerComp from './components/footerComp'
     width: 100%;
   }
 
+  .opacity-4 {
+    opacity: .4;
+  }
+
 </style>
 

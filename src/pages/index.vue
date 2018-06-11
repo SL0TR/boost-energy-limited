@@ -4,6 +4,7 @@
       <home-section/>
       <about-us-section/>
       <features-section/>
+      <product-and-services/>
     </v-container>
   </v-content>
 </template>
@@ -12,6 +13,7 @@
 import homeSection from '../components/pageSections/home'
 import aboutUsSection from '../components/pageSections/aboutUs'
 import featuresSection from '../components/pageSections/features'
+import productAndServices from '../components/pageSections/productAndServices'
 
 export default {
   data () {
@@ -21,7 +23,8 @@ export default {
   components: {
     homeSection,
     aboutUsSection,
-    featuresSection
+    featuresSection,
+    productAndServices
   }
 }
 </script>

@@ -2,17 +2,18 @@
   <v-slide-y-transition mode="out-in">
     <v-layout column align-center justify-space-around class="about" id="features">
       <p class="display-3 mb-5 primary--text border-bottom">Features</p>
-      <v-flex class="title mb-4 mt-2" xs12 text-xs-center v-for="feature in features" :key="feature">
-        <v-icon color="accent" size="25">chevron_right</v-icon>{{ feature  }}
+      <v-flex class="title mb-4 mt-2 accent--text" xs12 text-xs-center v-for="feature in features" :key="feature">
+        <v-icon color="primary" size="25">chevron_right</v-icon>{{ feature  }}
       </v-flex>
       <v-layout class="mt-5" row wrap justify-space-around>
         <v-flex sm5 xs12 class="mb-4"  v-for="card in cards" :key="card">
-          <v-card>
+          <v-card height="260" hover>
             <v-card-title primary-title>
               <div>
                 <p class="headline mb-0 accent--text">{{ card.title }}</p>
               </div>
             </v-card-title>
+            <hr class="opacity-4">
             <v-layout class="pa-4" d-flex column>
               <v-flex class="body-2 ma-2"  v-for="detail in card.details" :key="detail"> {{ detail }} </v-flex>
             </v-layout>
@@ -73,7 +74,6 @@ export default {
     min-height: calc(100vh - 61px);
     width: 100%;
     /* padding: 8rem; */
-    background: #fff;
   }
 
   @media (max-width: 700px) {
