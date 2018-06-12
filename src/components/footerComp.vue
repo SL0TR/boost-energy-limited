@@ -1,19 +1,12 @@
 <template>
   <v-footer height="auto" class="grey darken-3">
-    <v-layout row wrap justify-center>
-      <v-btn
-        v-for="link in links"
-        :key="link"
-        color="primary"
-        flat
-      >
-        {{ link }}
-      </v-btn>
-      <v-flex xs12 py-2 text-xs-center white--text>
-        Developed by <a href="https://sl0tr.github.io/" rel="noopener" target="_blank"><v-btn color="secondary" outline round>Mohaimin</v-btn></a>
-      </v-flex>
-      <v-flex xs12 py-2 text-xs-center white--text>
+    <v-layout  class="footer-comp" row align-center justify-space-between>
+      <v-flex xs12 pa-2 text-xs-left white--text>
         &copy;2018 — <strong class="secondary--text">Boost Energy Limited</strong>
+      </v-flex>
+      <img class="nav-logo" src="../statics/boost-energy-ltd/boost-energy-ltd-logo.png" alt="">
+      <v-flex xs12 pa-2 text-xs-right white--text>
+        Developed by <a href="https://sl0tr.github.io/" rel="noopener" target="_blank"><v-btn color="secondary" outline round>Mohaimin</v-btn></a>
       </v-flex>
     </v-layout>
   </v-footer>
@@ -23,12 +16,23 @@
 export default {
   data () {
     return {
-      links: ['Home', 'About Us', 'Services', 'Contact Us']
     }
   }
 }
 </script>
 
 <style scoped>
+
+  .nav-logo {
+    height: 5rem;
+    width: 5rem;
+    padding: .5rem;
+  }
+
+  @media (max-width: 769px) {
+    .footer-comp {
+      flex-direction: column;
+    }
+  }
 
 </style>

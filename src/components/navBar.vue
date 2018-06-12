@@ -123,7 +123,7 @@ export default {
     z-index: 10;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 769px) {
     .nav-menu {
       display: none;
     }
