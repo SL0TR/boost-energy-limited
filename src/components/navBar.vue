@@ -24,30 +24,31 @@
     <v-toolbar fixed app color="white">
       <img class="nav-logo" src="../statics/boost-energy-ltd/boost-energy-ltd-logo.png" alt="boost-energy-ltd-logo">
       <v-spacer></v-spacer>
-        <a class="nav-menu" v-for="(link, id) in navItems" :key="id" :href="link.url">
-          <v-btn
-            color="secondary"
-            flat
-          >
-            {{ link.title }}
-            <v-icon color="primary" right dark>{{ link.icon }}</v-icon>
-          </v-btn>
-        </a>
+        <v-btn
+          class="nav-menu"
+          color="secondary"
+          flat
+          v-for="(link, id) in navItems" :key="id"
+          @click="$vuetify.goTo(link.url)"
+        >
+          {{ link.title }}
+          <v-icon color="primary" right dark>{{ link.icon }}</v-icon>
+        </v-btn>
         <v-btn class="mob-nav-btn" color="secondary" flat @click="drawer = !drawer" icon>
           <v-icon  v-html="drawer ? 'close' : 'menu'">menu</v-icon>
         </v-btn>
     </v-toolbar>
     <div class="mobile-nav" v-if="drawer">
       <v-layout column justify-space-around align-center>
-        <a v-for="(link, id) in navItems" :key="id" :href="link.url">
-          <v-btn
-            color="secondary"
-            flat
-          >
-            {{ link.title }}
-            <v-icon color="primary" right dark>{{ link.icon }}</v-icon>
-          </v-btn>
-        </a>
+        <v-btn
+          color="secondary"
+          flat
+           v-for="(link, id) in navItems" :key="id"
+           @click="$vuetify.goTo(link.url)"
+        >
+          {{ link.title }}
+          <v-icon color="primary" right dark>{{ link.icon }}</v-icon>
+        </v-btn>
       </v-layout>
       
     </div>
@@ -116,9 +117,9 @@ export default {
   .mobile-nav {
     position: fixed;
     top: 56px;
-    height: 20rem;
+    height: auto;
     width: 100%;
-    background: #fff;
+    background: rgba(255, 255, 255, .9);
     z-index: 10;
   }
 
