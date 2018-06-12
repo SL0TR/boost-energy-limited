@@ -34,14 +34,8 @@ import footerComp from './components/footerComp'
     padding-right: 0 !important;
   }
 
-  .list__tile {
-    cursor: pointer;
-    margin-top: 5rem;
-  }
-
-  .list__tile:hover {
-    background: rgba(0, 0, 0, .2);
-    cursor: pointer;
+  a {
+    text-decoration: none;
   }
 
   .line-height {

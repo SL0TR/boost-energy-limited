@@ -109,10 +109,6 @@ export default {
     width: 5rem;
   }
 
-  a {
-    text-decoration: none;
-  }
-
   .mob-nav-btn {
     display: none;
   }
