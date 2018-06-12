@@ -21,6 +21,7 @@ import footerComp from './components/footerComp'
 </script>
 
 <style>
+
   /* GLOBAL STYLES */
 
   :root {

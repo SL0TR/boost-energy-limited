@@ -16,7 +16,7 @@ export default {
 <style scoped>
   .home {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('../../statics/boost-energy-ltd/stove-flame-bg.jpg');
-    height: calc(100vh - 61px);
+    height: 100vh;
     width: 100%;
     background-size: 100% 100%;
     background-attachment: fixed;

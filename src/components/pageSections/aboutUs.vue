@@ -1,6 +1,6 @@
 <template>
   <v-slide-y-transition mode="out-in">
-    <v-layout column align-center justify-space-around class="about" id="about-us">
+    <v-layout column align-center justify-space-around id="about-us">
       <p class="display-3 mb-5 primary--text border-bottom">About Us</p>
       <p class="title mt-5 mb-5 accent--text text-xs-center line-height">LPG (Liquefied Petroleum Gas) is a flammable gas and is a mixture of Propane and Butane. LPG is flexible, reliable, portable, clean and affordable which makes it an ideal fuel for a variety of applications. It is also suitable for all type of commercial, industrial and domestic applications.</p>
       <p class="title mt-5 mb-5 accent--text text-xs-center line-height">BOOST ENERGY is a private limited company which will enter into market as Boost LP Gas in early 2019. BOOST ENERGY aims to provide modern eco-energy to furnish the growing demand of LPG in the country.</p>
@@ -15,15 +15,15 @@ export default {
 </script>
 
 <style scoped>
-  .about {
-    min-height: calc(100vh - 61px);
+  #about-us {
+    min-height: 100vh;
     width: 100%;
     padding: 8rem;
     background: #fff;
   }
 
   @media (max-width: 700px) {
-    .about {
+    #about-us {
       padding: 1rem;
     }
   }

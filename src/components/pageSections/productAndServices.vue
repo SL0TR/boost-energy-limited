@@ -1,7 +1,7 @@
 <template >
   <v-slide-y-transition mode="out-in" >
-    <v-layout column align-center justify-space-around class="about" id="product-and-services">
-      <p class="display-3 mb-5 primary--text border-bottom" >Product</p>
+    <v-layout column align-center justify-space-around id="product-and-services" class="py-4">
+      <p class="display-3 mt-5 mb-5 primary--text border-bottom" >Product</p>
       <v-flex class="title mb-4 mt-2 accent--text" xs12 text-xs-center>
         Domestic, Commercial &amp; Industrial having cylinder size of 12 kg, 33 kg &amp; 45 kg as both 20mm &amp; 22mm whereas 12 kg for domestic uses &amp; 33kg/45kg for commercial &amp; Industrial Uses.
       </v-flex>
@@ -59,14 +59,14 @@ export default {
 </script>
 
 <style scoped>
-  .about {
-    min-height: calc(100vh - 61px);
+  #product-and-services {
+    min-height: 100vh;
     width: 100%;
     background: #fff;
   }
 
   @media (max-width: 700px) {
-    .about {
+    #product-and-services {
       padding: 1rem;
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <v-slide-y-transition mode="out-in">
-    <v-layout column align-center justify-space-around class="about" id="features">
-      <p class="display-3 mb-5 primary--text border-bottom">Features</p>
+    <v-layout column align-center justify-space-around id="features" class="py-4">
+      <p class="display-3 mb-5 mt-5 primary--text border-bottom">Features</p>
       <v-flex class="title mb-4 mt-2 accent--text" xs12 text-xs-center v-for="feature in features" :key="feature">
         <v-icon color="primary" size="25">chevron_right</v-icon>{{ feature  }}
       </v-flex>
@@ -70,14 +70,14 @@ export default {
 </script>
 
 <style scoped>
-  .about {
-    min-height: calc(100vh - 61px);
+  #features {
+    min-height: 100vh;
     width: 100%;
     /* padding: 8rem; */
   }
 
   @media (max-width: 700px) {
-    .about {
+    #features {
       padding: 1rem;
     }
   }

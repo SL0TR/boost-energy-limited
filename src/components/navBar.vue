@@ -30,7 +30,7 @@
             flat
           >
             {{ link.title }}
-            <!-- <v-icon color="primary" right dark>{{ link.icon }}</v-icon> -->
+            <v-icon color="primary" right dark>{{ link.icon }}</v-icon>
           </v-btn>
         </a> 
     </v-toolbar>
@@ -64,7 +64,8 @@ export default {
         },
         { 
           title: 'Contact Us',
-          icon: 'mail'
+          icon: 'mail',
+          url: '#contacts'
         }
       ]
     }
