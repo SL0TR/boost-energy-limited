@@ -6,7 +6,7 @@
         <v-icon color="primary" size="25">chevron_right</v-icon>{{ feature  }}
       </v-flex>
       <v-layout class="mt-5" row wrap justify-space-around>
-        <v-flex sm5 xs12 class="mb-4"  v-for="card in cards" :key="card">
+        <v-flex sm5 xs12 class="mb-4"  v-for="(card, id) in cards" :key="id">
           <v-card height="260" hover>
             <v-card-title primary-title>
               <div>

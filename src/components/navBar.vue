@@ -21,10 +21,10 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer> -->
-    <v-toolbar fixed app :clipped-left="clipped" color="white">
+    <v-toolbar fixed app color="white">
       <img class="nav-logo" src="../statics/boost-energy-ltd/boost-energy-ltd-logo.png" alt="boost-energy-ltd-logo">
       <v-spacer></v-spacer>
-        <a v-for="link in navItems" :key="link" :href="link.url">
+        <a class="nav-menu" v-for="(link, id) in navItems" :key="id" :href="link.url">
           <v-btn
             color="secondary"
             flat
@@ -32,8 +32,25 @@
             {{ link.title }}
             <v-icon color="primary" right dark>{{ link.icon }}</v-icon>
           </v-btn>
-        </a> 
+        </a>
+        <v-btn class="mob-nav-btn" color="secondary" flat @click="drawer = !drawer" icon>
+          <v-icon  v-html="drawer ? 'close' : 'menu'">menu</v-icon>
+        </v-btn>
     </v-toolbar>
+    <div class="mobile-nav" v-if="drawer">
+      <v-layout column justify-space-around align-center>
+        <a v-for="(link, id) in navItems" :key="id" :href="link.url">
+          <v-btn
+            color="secondary"
+            flat
+          >
+            {{ link.title }}
+            <v-icon color="primary" right dark>{{ link.icon }}</v-icon>
+          </v-btn>
+        </a>
+      </v-layout>
+      
+    </div>
   </div>
 </template>
 
@@ -41,6 +58,7 @@
 export default {
   data () {
     return {
+      drawer: false,
       navItems: [
         { 
           title: 'Home',
@@ -93,6 +111,29 @@ export default {
 
   a {
     text-decoration: none;
+  }
+
+  .mob-nav-btn {
+    display: none;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 56px;
+    height: 20rem;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+  }
+
+  @media (max-width: 700px) {
+    .nav-menu {
+      display: none;
+    }
+
+    .mob-nav-btn {
+      display: block;
+    }
   }
 
 </style>
