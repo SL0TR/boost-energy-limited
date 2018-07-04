@@ -107,7 +107,7 @@ export default {
 
   .nav-logo {
     height: 80%;
-    width: 5rem;
+    width: 4rem;
   }
 
   .mob-nav-btn {

@@ -6,7 +6,7 @@
       </v-flex>
       <img class="nav-logo" src="../statics/boost-energy-ltd/boost-energy-ltd-logo.png" alt="">
       <v-flex xs12 pa-2 text-xs-right white--text>
-        Developed by <a href="https://sl0tr.github.io/" rel="noopener" target="_blank"><v-btn color="secondary" outline round>Mohaimin</v-btn></a>
+        Developed by <a href="https://sl0tr.github.io/" rel="noopener" target="_blank"><v-btn color="primary" outline round>Mohaimin Islam</v-btn></a>
       </v-flex>
     </v-layout>
   </v-footer>
